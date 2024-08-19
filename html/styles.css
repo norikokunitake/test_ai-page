@@ -1,0 +1,235 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #193f72;
+}
+
+.outer_container {
+	width: 100%;
+	background: url('./img/bg_img.png') no-repeat left center / 1021px auto;
+	font-size: clamp(16px, 1.8vw, 30px);
+}
+
+.outer_container br {
+	display: none;
+}
+.bg_blue {
+	background: #bfdcfc;
+}
+
+/*
+============================================ 
+.bg-blue{
+	background:#bfdcfc url('bg_img.png') no-repeat left center / 1021px auto;
+}
+*/
+
+/*ヘッダー
+============================================ */
+.container_head,
+.container_kadai{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 100px 0;
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.features {
+	justify-content: flex-start;
+	width: 50%;
+}
+
+.devices {
+	justify-content: flex-end;
+	width: 50%;
+}
+
+.devices img {
+	max-width: 500px;
+}
+
+.features p.catch {
+	background-color: #193f72;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+	font-size: clamp(16px, 1.8vw, 20px);
+	width: 50%;
+	margin-bottom: 30px;
+}
+
+.container_head h1 {
+	color: #3189d3;
+	font-size: clamp(25px, 1.8vw, 30px);
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+
+.container_head h2 {
+	margin-top: 60px;
+	font-weight: normal;
+}
+
+.features p.catch,
+.container_head h2 {
+	font-size: clamp(18px, 1.8vw, 20px);
+	line-height: 2.2rem;
+}
+
+.devices img {
+	max-width: 100%;
+	height: auto;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	margin-top: 100px;
+}
+
+button {
+	background-color: #3189d3;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 480px;
+	height: 80px;
+	font-size: clamp(16px, 1.8vw, 20px);
+}
+
+button:hover {
+	filter: brightness(1.2);
+}
+
+button.secondary {
+	background-color: #cd5c5c;
+}
+
+/* 課題
+============================================ */
+.container_kadai {
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	text-align: left;
+	align-items: center;
+}
+.container_kadai h2{
+	font-size: clamp(26px, 1.8vw, 30px);
+	font-weight: bold;
+}
+.container_kadai ul {
+	padding-left: 20px;
+}
+.container_kadai li{
+	position: relative;
+	list-style: none;
+	margin:0 10px 20px 0;
+	font-size: clamp(16px, 1.8vw, 20px);
+}
+.container_kadai li:before {
+	content: url('./img/check_icon.svg'); 
+	margin-right: 20px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+
+
+/* タブレット用のスタイル */
+@media (max-width: 1024px) {
+	.outer_container {
+		background: url('./img/bg_img.png') no-repeat top center / 1021px auto;
+	}
+	.outer_container br {
+		display: block;
+	}
+	.outer_container img{
+		width: 90%;
+		height: 90%;
+		display: block;
+		margin: auto;
+	}
+	.bg_blue {
+		background: #bfdcfc;
+	}
+	.container_head,
+	.container_kadai { 
+		width: 100%;
+	}
+	.container_kadai {
+		display: grid;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 10px;
+		text-align: left;
+	}
+	.content {
+		display: grid;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 10px;
+		text-align: left;
+	}
+
+
+	.features {
+		justify-content: flex-start;
+		width: 100%;
+	}
+
+	.features p.catch,
+	.container_head h1,
+	.container_head h2 {
+		text-align: center;
+	}
+
+	.features p.catch {
+		margin: auto;
+		width: 70%;
+	}
+
+
+	.buttons {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	button {
+		width: 80%;
+		margin: 0 auto 30px;
+	}
+
+	.devices {
+		width: 100%;
+	}
+
+
+}
+
+/* スマホ用のスタイル */
+@media (max-width: 767px) {
+
+	.features p.catch,
+	.container_head h1,
+	.container_head h2 {
+		text-align: center;
+	}
+
+
+
+
+}
